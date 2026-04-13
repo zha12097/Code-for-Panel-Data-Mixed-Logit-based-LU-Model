@@ -42,7 +42,7 @@ def run(config):
     # ══════════════════════════════════════════════════════════════════════
     #
     # A "project" is defined as ALL development actions occurring on a single
-    # parcel within a single timestep (Chapter 4, §4.3.3, Figure 4.5).
+    # parcel within a single timestep (Section 3).
     #
     # Rules:
     #   - If parcel P has 2 retail buildings built in 2018 → 1 Retail project
@@ -179,7 +179,7 @@ def run(config):
     # After a parcel completes a project and becomes fully developed
     # (saturated), it should EXIT the simulation in subsequent years.
     #
-    # Implementation (Chapter 5, Figure 5.4):
+    # Implementation (Section 4):
     #   After each timestep t:
     #     if parcel chose something other than A_N_O at time t:
     #         check saturation status (from Stage 6 classifier)
