@@ -139,7 +139,7 @@ def run(config):
     # ══════════════════════════════════════════════════════════════════════
     #
     # Architecture: Two-layer hierarchical classification framework
-    #   (see Chapter 3, Figure 3.6)
+    #   (see Dissertation Chapter 3, Figure 3.6)
     #
     # Layer 1 — Coarse Classification (3 super-labels):
     #   - "Residential-Only (RO)": parcels where only residential uses are permitted
