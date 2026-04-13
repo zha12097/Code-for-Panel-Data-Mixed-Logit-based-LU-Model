@@ -1,20 +1,20 @@
-# Parcel-Level Land Use Supply Microsimulation Framework
+# Parcel-Level Land Use Supply Microsimulation Framework (Low Data Quality Version)
 
-A modular, replicable framework for simulating land use (LU) supply decisions at the **parcel level** in large metropolitan regions. Developed and validated in Canada's Greater Toronto and Hamilton Area (GTHA), but designed for transferability to any jurisdiction with formal zoning systems.
+A modular, replicable framework for modelling land use (LU) supply decisions at the **parcel level** in large metropolitan regions. Developed and validated in Canada's Greater Toronto-Hamilton Area (GTHA), but designed for transferability to any jurisdiction with formal zoning systems.
 
-> **Citation:** Zhang, J., Kiko, M., Miller, E.J. *What Drives Development? A Parcel-Level Choice Analysis of Retail, Industrial, and Office Supply in Canada's Largest Metropolitan Region.* Submitted to *Journal of Transport and Land Use*.
+> **Citation:** Zhang, J., Kiko, M., Miller, E.J. *Land Use Supply at the Parcel Level in the Metropolitan Scale Area: Framework, Application, and Behavioural Insights* Submitted to *Journal of Transport and Land Use*.
 
 ---
 
 ## Overview
 
-This repository implements the conceptual framework described in Chapters 4–5 of the associated dissertation. The framework models **what type** of commercial development (Retail, Industrial, Office, Mixed, or No Development) occurs on each land parcel using a **panel-data mixed logit** discrete choice model. Zoning by-law constraints define each parcel's feasible choice set, and a deep-learning saturation classifier filters out fully built parcels.
+This repository implements the conceptual framework described in Section 3 of the associated paper. The framework models **what type** of commercial development (Retail, Industrial, Office, Mixed, or No Development) occurs on each land parcel using a **panel-data mixed logit** discrete choice model. Zoning by-law constraints define each parcel's feasible choice set, and a deep-learning saturation classifier filters out fully built parcels.
 
 ### Core Design Principles
 
 | Principle | Description |
 |---|---|
-| **Spatial Fidelity** | Land parcels as the fundamental simulation unit (~1.6 M in the GTHA) |
+| **Spatial Fidelity** | Land parcels as the fundamental simulation unit (~1.4 M in the GTHA) |
 | **Policy Awareness** | Real zoning by-law permissions constrain each parcel's feasible choice set |
 | **Behavioural Integrity** | Econometric discrete choice models decode developer decision-making |
 | **Operational Flexibility** | Adaptable to low-data (Version 1: type only) and high-data (Version 2: type + floorspace) environments |
@@ -116,7 +116,7 @@ The pseudo-code modules are written as richly commented, structurally valid Pyth
 
 | Dataset | Key Fields | Source (GTHA example) |
 |---|---|---|
-| Land parcels | geometry, unique ID, area | Provincial assessment rolls |
+| Land parcels | geometry, unique ID, area | Provincial assessment parcels |
 | Building inventory | address, year built, LU type, lifecycle status | CoStar Group or municipal rolls |
 | Zoning by-laws | zone code, permitted uses per parcel | Municipal open data / ZBL documents |
 | Market indicators | rent, sale price, cap rate, vacancy, operating cost | CoStar Group or equivalent |
