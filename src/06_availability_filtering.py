@@ -49,7 +49,7 @@ def run(config):
     #     e.g., a purely residential parcel (R_LM=1, all commercial=0)
     #     is excluded from the commercial supply model entirely.
     #
-    #     In the GTHA: ~1.6M parcels → ~12,879 candidates after this filter
+    #     In the GTHA: ~1.4M parcels → ~12,879 candidates after this filter
     #     (the vast majority are small residential lots)
     #
     # (B) ALTERNATIVE-LEVEL RESTRICTION:
@@ -124,7 +124,7 @@ def run(config):
     #
     # ── Step 2a: Manual Labelling via Remote Sensing ─────────────────────
     #
-    # Using multi-year satellite imagery as ground truth (Table 5.2):
+    # Using multi-year satellite imagery as ground truth (Dissertation Table 5.2):
     #   - For a sample of ~4,000 parcels, visually inspect:
     #     • Does the parcel have undeveloped land (empty lots, surface parking)?
     #     • Did new structures appear between imagery dates?
