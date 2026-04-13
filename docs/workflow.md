@@ -6,7 +6,7 @@
 
 ## Mathematical Foundations
 
-### Utility Function (Equation 5.1)
+### Utility Function (Equation 1)
 
 Each parcel agent *i* selects the alternative *j* in year *t* that maximises:
 
@@ -22,7 +22,7 @@ U_ijt = β_i · x_ijt + α_i · z_i^d + ε_ijt
 | `α_i` | Random coefficients on generic attributes |
 | `ε_ijt` | iid Type-I Extreme Value (Gumbel) error |
 
-### Choice Probability (Equations 5.2–5.4)
+### Choice Probability (Equations 2–4)
 
 Conditional on the random coefficients:
 
@@ -42,15 +42,14 @@ Approximated via simulation with *R* = 200 Halton draws:
 P'(j|i,t) = (1/R) Σ_{r=1}^{R} P(j|i,t, β_r, α_r)
 ```
 
-### Spatial Interaction Model for Market Disaggregation (Equation 5.8)
-
+### Spatial Interaction Model for Market Disaggregation (Equation A.1)
 ```
 RM_ij^{t-1} = [ Σ_{k≠i} M_kj^{t-1} / l_ik² ] / [ Σ_{k≠i} 1 / l_ik² ]
 ```
 
 This is a distance-weighted average that converts meso-level (submarket) market data into a smooth, parcel-level surface.
 
-### Market Inertia (Equation 5.7)
+### Market Inertia (Equation 7)
 
 ```
 CM_ij^{t-1} = (M_ij^{t-1} - M_ij^{t-2}) / M_ij^{t-2} × 100%
