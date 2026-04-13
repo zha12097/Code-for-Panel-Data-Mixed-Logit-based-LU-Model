@@ -1,6 +1,6 @@
 # Parcel-Level Land Use Supply Microsimulation Framework (Low Data Quality Version)
 
-A modular, replicable framework for simulating land use (LU) supply decisions at the **parcel level** in large metropolitan regions. Developed and validated in Canada's Greater Toronto and Hamilton Area (GTHA), but designed for transferability to any jurisdiction with formal zoning systems.
+A modular, replicable framework for simulating land use (LU) supply decisions at the parcel level in large metropolitan regions. Developed and validated in Canada's Greater Toronto and Hamilton Area (GTHA), but designed for transferability to any jurisdiction with formal zoning systems.
 
 > **Paper citation:** Zhang, J., Kiko, M., Miller, E.J. *Land Use Supply at the Parcel Level in the Metropolitan-Scale Area: Framework, Application, and Behavioural Insights.* Submitted to *Journal of Transport and Land Use*.
 >
