@@ -177,7 +177,7 @@ def run(config):
     # These vary by BOTH location AND alternative, capturing how much
     # development of each type occurred nearby in recent years.
     #
-    # Notation (from Equation 5.7):
+    # Notation (from Equation 7):
     #   Q_ij^{t-n, d} : Count of type-j projects within distance d of
     #                    parcel i, built in year (t-n)
     #                    → "Supply in the n-th year before t"
