@@ -50,7 +50,7 @@ def run(config):
     #   - municipality  : Administrative unit name
     #   - region        : Upper-tier regional municipality
     #
-    # The GTHA contains ~1.6 million parcels with median area ~450 m².
+    # The GTHA contains ~1.4 million parcels with median area ~450 m².
     # Ensure the CRS matches the project CRS in config (e.g., EPSG:26917).
 
     # load_and_validate("parcels", config["paths"]["parcels_shapefile"],
@@ -129,7 +129,7 @@ def run(config):
     #
     # The GTHA has 22 CoStar-defined submarkets. These meso-level values
     # are disaggregated to the parcel level in Stage 7 via a spatial
-    # interaction model (Equation 5.8 in the dissertation).
+    # interaction model (Equation A.1 in the dissertation).
 
     # load_and_validate("market", config["paths"]["market_data_csv"],
     #                   required_fields=["submarket_id", "year", "lu_type",
@@ -195,7 +195,7 @@ def run(config):
     # 8. REMOTE SENSING IMAGERY (for saturation labelling in Stage 6)
     # ══════════════════════════════════════════════════════════════════════
     #
-    # Source (GTHA): Google Earth historical imagery, Esri World Imagery
+    # Source (GTHA): University of Toronto Library
     # Purpose:       Ground-truth for manually labelling parcel saturation status
     #
     # Required:
