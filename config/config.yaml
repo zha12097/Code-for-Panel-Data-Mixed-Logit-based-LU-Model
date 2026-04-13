@@ -1,20 +1,21 @@
 # ==============================================================================
 # Configuration Template for Parcel-Level LU Supply Framework
 # ==============================================================================
+# Manipulate the "<?>" in this file, then
 # Copy this file, fill in paths and parameters for your study area,
 # and reference it from each pipeline stage.
 # ==============================================================================
 
 # --- Study Area & Temporal Scope ---------------------------------------------
 study_area:
-  name: "GTHA"                          # Human-readable label
-  crs: "EPSG:26917"                     # Projected coordinate system (UTM 17N for GTHA)
-  bounds_shapefile: null                 # Optional: clip to boundary polygon
+  name: "<?>"                           # GTHA, for example, revise accordingly
+  crs: "EPSG: <?>"                      # Projected coordinate system (Choose Accordingly)
+  bounds_shapefile: null                # Optional: clip to boundary polygon
 
 temporal:
-  start_year: 2015                      # First simulation year
-  end_year: 2023                        # Last simulation year
-  lag_initialization_years: 2           # Years reserved for lag computation (e.g., 2013-2014)
+  start_year: <?>                       # First simulation year, e.g., 2015
+  end_year: <?>                         # Last simulation year, e.g., 2023
+  lag_initialization_years: 2           # Years reserved for lag computation (e.g., 2013-2014), you can also revise this.
   interval: "annual"                    # Temporal resolution: "annual" | "quarterly" | "monthly"
 
 # --- Choice Set Definition ---------------------------------------------------
@@ -29,12 +30,12 @@ choice_set:
     - "Retail"
     - "Industrial"
     - "Office"
-  residential_treatment: "absorb_into_ANO"  # Residential projects → A_N_O category
+  residential_treatment: "absorb_into_ANO"  # Residential projects → A_N_O category, I added "A" to ensure the "NO" is the base alternative
 
 # --- Spatial Resolution & Buffers --------------------------------------------
 spatial:
   fundamental_unit: "parcel"            # "parcel" | "block" | "DA" | "TAZ"
-  buffer_distances_m: [100, 1000]       # Neighbourhood buffer radii in metres
+  buffer_distances_m: [100, 1000]       # Neighbourhood buffer radii in metres, you can revise this <?>
   default_buffer_m: 1000                # Default for reporting
 
 # --- File Paths (user must populate) ----------------------------------------
