@@ -8,15 +8,15 @@ interaction model.
 
 Purpose:
     Commercial market data (rent, sale price, cap rate, vacancy, etc.) are
-    typically available only at an aggregate geographic level (e.g., 22
+    typically available only at an aggregate geographic level (e.g., multiple
     submarkets in the GTHA). This stage disaggregates those meso-level
     metrics to the parcel level, producing alternative-specific market
     attributes that enter the discrete choice utility function.
 
 Reference:
     See Section 3 and the Appendix of the associated paper for the full
-    mathematical formulation of the spatial interaction model (Eq. 5.8)
-    and the market variable definitions (Eq. 5.7).
+    mathematical formulation of the spatial interaction model (Eq. A.1)
+    and the market variable definitions (Eq. 7).
 
 Platform note:
     In the GTHA case study, this stage was conducted in ArcGIS Pro using
@@ -57,7 +57,7 @@ def run(config):
     #
     #   RM_ij^{t-1} = [ Σ_{k≠i} M_kj^{t-1} / l_ik² ] / [ Σ_{k≠i} 1 / l_ik² ]
     #
-    #   (Equation 5.8)
+    #   (Equation A.1)
     #
     # Where:
     #   M_kj^{t-1} = market attribute value for type j at location k in year t-1
@@ -105,7 +105,7 @@ def run(config):
     # # distances[i, k] = Euclidean distance from parcel i to submarket k
 
     # ══════════════════════════════════════════════════════════════════════
-    # STEP 3: APPLY INVERSE-DISTANCE-SQUARED WEIGHTING (Equation 5.8)
+    # STEP 3: APPLY INVERSE-DISTANCE-SQUARED WEIGHTING (Equation A.1)
     # ══════════════════════════════════════════════════════════════════════
     #
     # For each parcel i, year t, LU type j, and market variable M:
@@ -156,7 +156,7 @@ def run(config):
     # market TRENDS than to static levels. Therefore, percentage changes
     # in market variables are computed.
     #
-    # From Equation 5.7:
+    # From Equation 7:
     #   CM_ij^{t-1} = (M_ij^{t-1} - M_ij^{t-2}) / M_ij^{t-2} × 100%
     #
     # These "change" variables enter the model alongside (or instead of)
